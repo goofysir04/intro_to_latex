@@ -1,0 +1,141 @@
+% use a standard article class, but make the text 10pt
+\documentclass[10pt]{article}
+
+% specify the title, authors, etc.
+\title{A review of LaTeX for generating journal articles}
+\author{David P. Larson and Michelle Ferrez}
+\date{\today}  % show the current date
+
+% use the AMS LaTeX packages for better equations, math symbols, etc.
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+% required package for insert graphics
+\usepackage{graphicx}
+
+
+
+% start the LaTeX document
+\begin{document}
+
+% insert the title, authors, etc.
+\maketitle
+
+%-----------------------------------------------------------------------------
+% ABSTRACT
+%-----------------------------------------------------------------------------
+\begin{abstract}
+    We review some concrete examples of formatting a journal article forv
+    submission using LaTeX. Specifically, we cover how to use LaTeX packages
+    for improved functionality, adding figures and tables, and citing
+    references (including auto-generating the bibliography from a BibTeX file).
+\end{abstract}
+
+
+%-----------------------------------------------------------------------------
+% INTRO
+%-----------------------------------------------------------------------------
+\section{Introduction}
+
+
+%-----------------------------------------------------------------------------
+% EQUATIONS
+%-----------------------------------------------------------------------------
+\section{Equations}
+
+\subsection{Simple equations}
+The standard way to produce one-line equations in LaTeX is as follows:
+\begin{equation}
+    y = ax + b
+\end{equation}
+
+You can group multiple lines of equations together as follows
+\begin{eqnarray}
+    y = ax + b \\
+    z = \alpha x^2 + \beta x + \gamma
+\end{eqnarray}
+
+\subsection{Advanced equations}
+Most journals however recommend (or sometimes require) you to instead use the
+American Mathematical Society (AMS) LaTeX packages for creating advanced
+equations. Here's a one line equation using the AMS package
+\begin{align}
+    y = ax + b
+\end{align}
+
+And here is a multi-line equation set
+\begin{align}
+    y &= ax + b \\                      % the "&" sets where to align the two equations
+    z &= \alpha x^2 + \beta x + \gamma  % in this case, it aligns the equal signs
+\end{align}
+
+Here's another example: a multi-line derivation of the gradient of a function
+\begin{align}
+    \nabla f(x) &= \nabla ( \frac{1}{2} x^T A x + b ) \\
+                 &= \\
+\end{align}
+
+The AMS package also includes functions to produce vectors and matrices:
+\begin{align}
+    A = \begin{bmatrix}    % bmatrix = bracket matrix, pmatrix = paranthesis matrix, etc.
+        A_{1,1} & A_{1,2} & A_{1,3} \\   % the "&" split up the columns
+        A_{2,1} & A_{2,2} & A_{2,3} \\
+        A_{3,1} & A_{3,2} & A_{3,3} \\
+    \end{bmatrix}
+\end{align}
+
+
+
+
+%-----------------------------------------------------------------------------
+% FIGURES
+%-----------------------------------------------------------------------------
+\section{Figures}
+
+
+%-----------------------------------------------------------------------------
+% TABLES
+%-----------------------------------------------------------------------------
+\section{Tables}
+
+
+
+%-----------------------------------------------------------------------------
+% CITATIONS
+%-----------------------------------------------------------------------------
+\section{References and Citations}
+
+\subsection{References}
+Referring to items within the document.
+
+
+\subsection{Citations}
+Citing sources from a bibliography file.
+
+\cite{Larson2016} is an example journal article that was prepared using LaTeX
+and published in the Renewable Energy journal.
+
+
+
+%-----------------------------------------------------------------------------
+% CONCLUSIONS
+%-----------------------------------------------------------------------------
+\section{Conclusions}
+
+
+
+
+%-----------------------------------------------------------------------------
+% BIBLIOGRAPHY
+%-----------------------------------------------------------------------------
+
+% set the bibliography style
+% - plain = numbered
+%
+\bibliographystyle{plain}
+
+% the BibTeX file that has all the citation info
+\bibliography{sources.bib}
+
+
+\end{document}
