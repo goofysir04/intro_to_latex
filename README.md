@@ -6,7 +6,7 @@ Center, Jacobs School of Engineering, University of California San Diego.
 Here are some resources that may help with learning LaTeX:
 - ShareLaTeX tutorials: https://www.sharelatex.com/learn/Main_Page
 - example LaTeX files: https://github.com/ucsdidea/intro_to_latex
-    - various LaTeX templates:
+- various LaTeX templates:
     - https://www.sharelatex.com/templates/
     - http://www.latextemplates.com/
     - https://www.overleaf.com/latex/templates/
